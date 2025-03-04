@@ -389,7 +389,7 @@ a.back-to-top:focus {
   font-size: 32px;
   text-transform: uppercase;
   color: rgb(50, 107, 230);
-  font-weight: 700;
+  font-weight: 500;
 }
 .bg-faded {
   background-color: transparent;
