@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surendar - Full Stack Developer</title>
+    <link rel="icon" href="files/surey.jpg">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#home">Surendar</a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Hi, I'm <span class="highlight">Surendar </span>
+                </h1>
+                <p class="hero-subtitle">Full Stack Developer & DevOps Engineer</p>
+                <p class="hero-description">
+                    Passionate about building scalable web applications and implementing robust DevOps solutions. 
+                    Currently working at HCL Tech, specializing in React.js, Node.js, and cloud infrastructure.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <button id="view-cv-btn" class="btn btn-secondary">View CV</button>
+                    <a href="#contact" class="btn btn-outline">Get In Touch</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="profile-card">
+                    <div class="profile-img">
+                        <img src="files/IMG_20250603_183541.jpg" alt="Surendar E Profile Picture">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        I'm a passionate Computer Science Engineering student at Sri Muthukumaran Institute of Technology, 
+                        Chennai, with hands-on experience in full-stack development and DevOps practices. Currently working 
+                        as a Developer at HCL Tech, where I build scalable web applications and DevOps dashboards.
+                    </p>
+                    <p>
+                        My expertise spans across modern web technologies including React.js, Node.js, and MongoDB, 
+                        along with DevOps tools like Docker, Jenkins, and AWS. I'm passionate about creating efficient, 
+                        user-friendly solutions and implementing robust CI/CD pipelines.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <h3>10+</h3>
+                            <p>Projects Completed</p>
+                        </div>
+                        <div class="stat">
+                            <h3>2+</h3>
+                            <p>Years Experience</p>
+                        </div>
+                        <div class="stat">
+                            <h3>7.8</h3>
+                            <p>CGPA</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title">Work Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Sep 2024 - Present</div>
+                        <h3>Developer</h3>
+                        <h4>HCL Tech, Chennai</h4>
+                        <ul>
+                            <li>Built a DevOps dashboard with real-time CI/CD pipeline status tracking</li>
+                            <li>Developed and maintained web applications using React.js, Node.js, and MongoDB</li>
+                            <li>Created and deployed WordPress websites for client solutions</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Jun 2023 - Jul 2023</div>
+                        <h3>Networking & IT Support</h3>
+                        <h4>VR Dakshin Pvt Ltd</h4>
+                        <ul>
+                            <li>Configured and maintained network infrastructure for smooth operations</li>
+                            <li>Provided technical support to troubleshoot and resolve IT-related issues</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="files/devops-dashboard.png" alt="DevOps Dashboard">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/Mr-Surendar/DevOps-Dashboard.git" class="project-link" target="_blank"><i class="fab fa-github"></i></a>
+                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>DevOps Dashboard – Real-Time CI/CD Monitor</h3>
+                        <p>Built a secure dashboard displaying GitHub and Jenkins build pipelines with Docker and Jenkins for CI/CD and Terraform for infrastructure provisioning.</p>
+                        <div class="project-tech">
+                            <span>React.js</span>
+                            <span>Node.js</span>
+                            <span>Docker</span>
+                            <span>Jenkins</span>
+                            <span>Terraform</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="files/aws-eks.png" alt="AWS EKS Deployment">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/Mr-Surendar" class="project-link" target="_blank"><i class="fab fa-github"></i></a>
+                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Containerized Application to AWS EKS</h3>
+                        <p>Architected a three-tier VPC setup with private/public subnets and integrated AWS ALB Ingress Controller for external access.</p>
+                        <div class="project-tech">
+                            <span>AWS EKS</span>
+                            <span>Docker</span>
+                            <span>Kubernetes</span>
+                            <span>Terraform</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="files/cicd-pipeline.png" alt="CI/CD Pipeline">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/Mr-Surendar" class="project-link" target="_blank"><i class="fab fa-github"></i></a>
+                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>CI/CD Pipeline with Helm & ArgoCD</h3>
+                        <p>Built an end-to-end CI/CD pipeline to automate app build, containerization, and deployment to Kubernetes using GitOps practices.</p>
+                        <div class="project-tech">
+                            <span>Helm</span>
+                            <span>ArgoCD</span>
+                            <span>GitLab CI</span>
+                            <span>Kubernetes</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="files/monitoring-stack.png" alt="Monitoring Stack">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/Mr-Surendar" class="project-link" target="_blank"><i class="fab fa-github"></i></a>
+                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>App Monitoring with Prometheus & Grafana</h3>
+                        <p>Configured end-to-end monitoring stack with custom metrics, alerting rules, and service discovery for real-time insights.</p>
+                        <div class="project-tech">
+                            <span>Prometheus</span>
+                            <span>Grafana</span>
+                            <span>Docker</span>
+                            <span>Kubernetes</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="files/skyairlines.png" alt="SkyAirlines">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/Mr-Surendar/Flight-Booking-App.git" class="project-link" target="_blank"><i class="fab fa-github"></i></a>
+                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>SkyAirlines – Online Flight Booking System</h3>
+                        <p>Designed a MERN-based flight booking app with real-time seat selection, search functionality, and user authentication.</p>
+                        <div class="project-tech">
+                            <span>React.js</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                            <span>Express.js</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="files/infrastructure.png" alt="Infrastructure as Code">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/Mr-Surendar" class="project-link" target="_blank"><i class="fab fa-github"></i></a>
+                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Infrastructure as Code with Terraform</h3>
+                        <p>Developed complete infrastructure using Terraform with remote backend state management, version locking, and modularization.</p>
+                        <div class="project-tech">
+                            <span>Terraform</span>
+                            <span>AWS</span>
+                            <span>VPC</span>
+                            <span>RDS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Skills & Technologies</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3><i class="fas fa-code"></i> Programming Languages</h3>
+                    <div class="skill-items">
+                        <span class="skill-item">JavaScript</span>
+                        <span class="skill-item">Node.js</span>
+                        <span class="skill-item">Python</span>
+                        <span class="skill-item">Bash</span>
+                        <span class="skill-item">HTML</span>
+                        <span class="skill-item">CSS</span>
+                        <span class="skill-item">SQL</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-laptop-code"></i> Frontend</h3>
+                    <div class="skill-items">
+                        <span class="skill-item">React.js</span>
+                        <span class="skill-item">Tailwind CSS</span>
+                        <span class="skill-item">HTML5</span>
+                        <span class="skill-item">CSS3</span>
+                        <span class="skill-item">JavaScript ES6+</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-server"></i> Backend</h3>
+                    <div class="skill-items">
+                        <span class="skill-item">Node.js</span>
+                        <span class="skill-item">Express.js</span>
+                        <span class="skill-item">MongoDB</span>
+                        <span class="skill-item">REST APIs</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-tools"></i> DevOps & Tools</h3>
+                    <div class="skill-items">
+                        <span class="skill-item">Git</span>
+                        <span class="skill-item">GitHub</span>
+                        <span class="skill-item">Jenkins</span>
+                        <span class="skill-item">Docker</span>
+                        <span class="skill-item">NGINX</span>
+                        <span class="skill-item">Terraform</span>
+                        <span class="skill-item">Linux</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-cloud"></i> Cloud Platforms</h3>
+                    <div class="skill-items">
+                        <span class="skill-item">AWS EC2</span>
+                        <span class="skill-item">AWS EKS</span>
+                        <span class="skill-item">Azure</span>
+                        <span class="skill-item">Netlify</span>
+                        <span class="skill-item">Vercel</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-external-link-alt"></i> IT Support</h3>
+                    <div class="skill-items">
+                        <span class="skill-item">Hardware & Software Solutions</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Let's work together!</h3>
+                    <p>I'm always interested in new opportunities and exciting projects. Feel free to reach out if you'd like to collaborate or just say hello!</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>preepsurendar874@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+91 9027515748</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Chennai, Tamil Nadu, India</span>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com/Mr-Surendar" class="social-link" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://linkedin.com/in/surendar-e" class="social-link" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="mailto:preepsurendar874@gmail.com" class="social-link"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <form class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Surendar E. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- CV Modal -->
+    <div id="cv-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Surendar - Resume</h2>
+                <div class="modal-actions">
+                    <button id="download-cv-btn" class="btn btn-primary">
+                        <i class="fas fa-download"></i> Download CV
+                    </button>
+                    <button id="open-cv-btn" class="btn btn-secondary">
+                        <i class="fas fa-external-link-alt"></i> Open in New Tab
+                    </button>
+                    <span class="close">&times;</span>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="cv-viewer">
+                    <div class="cv-loading" id="cv-loading">
+                        <div class="loading-spinner"></div>
+                        <p>Loading resume...</p>
+                    </div>
+                    <iframe id="cv-iframe" width="100%" height="600px" frameborder="0" style="display: none;">
+                    </iframe>
+                    <div class="cv-fallback" id="cv-fallback" style="display: none;">
+                        <div class="fallback-message">
+                            <i class="fas fa-file-pdf" style="font-size: 3rem; color: #3b82f6; margin-bottom: 1rem;"></i>
+                            <h3>Resume Preview</h3>
+                            <p>Your browser doesn't support PDF viewing. Use the buttons above to download or open in a new tab.</p>
+                            <div class="fallback-buttons">
+                                <button id="retry-cv-btn" class="btn btn-outline">
+                                    <i class="fas fa-redo"></i> Try Again
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cv-embed-fallback" id="cv-embed-fallback" style="display: none;">
+                        <embed id="cv-embed" src="/placeholder.svg" type="application/pdf" width="100%" height="600px">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
