@@ -583,6 +583,37 @@ section {
   border-radius: 2px;
 }
 
+/* HCL – two buttons on hover */
+.certificate-btn {
+  opacity: 0;
+  transform: translateY(6px);
+  transition: all 0.25s ease;
+  background: linear-gradient(135deg, #3b82f6, #1e40af);
+  color: white;
+  padding: 8px 18px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  box-shadow: 0 4px 14px rgba(59, 130, 246, 0.35);
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* Show both buttons on hover */
+.certificate-card:hover .certificate-btn-group {
+  opacity: 1;
+  transform: translateY(0);
+  text-decoration: none;
+  display: flex;
+  gap: 1.2rem; 
+}
+
+/* Slightly smaller buttons so two fit nicely */
+.certificate-btn-group .certificate-btn {
+  font-size: 0.75rem;
+  padding: 7px 14px;
+  white-space: nowrap;
+}
 
 
 /* Projects Section */
@@ -1576,20 +1607,45 @@ body:not(.loaded)::after {
   display: block;
 }
 
-/* Start / Restart Button */
+/* Start / Restart Button – fully transparent */
 .dino-btn {
   position: absolute;
   bottom: 100px;
   left: 50%;
   transform: translateX(-50%);
-  border-radius: 50px;
+
+  background: transparent !important;
   border: none;
+  outline: none;
+
+  padding: 0;
+  margin: 0;
+
   color: rgb(4, 4, 4);
   font-weight: 500;
   font-size: 1.85rem;
   cursor: pointer;
-  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.35);
+
+  box-shadow: none;
+
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  user-select: none;
 }
+
+.dino-btn:focus,
+.dino-btn:active {
+  outline: none;
+  box-shadow: none;
+  background: transparent;
+}
+
+.dino-btn:hover {
+  filter: drop-shadow(0 0 10px rgba(59, 130, 246, 0.4));
+}
+
 
 #dinoCanvas {
   /* fade on left & right edges */

@@ -230,9 +230,16 @@ function openCertificates(type) {
   }
 
   if (type === "hcl") {
-    window.open("files/certificates/Surendar_HCL_Web_Internship completion letter.pdf", "_blank");
-    window.open("files/certificates/Surendar_HCL_Final year_Project completion letter.pdf", "_blank"); 
+    window.open(
+      "files/certificates/Surendar_HCL_Web_Internship_Completion_Letter.pdf",
+      "_blank"
+    );
+    window.open(
+      "files/certificates/Surendar_HCL_Final_Year_Project_Completion_Letter.pdf",
+      "_blank"
+    );
   }
+
 
   if (type === "ancra") {
     window.open("files/certificates/ancra-qa-automation-certificate.pdf", "_blank");
