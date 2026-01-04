@@ -406,7 +406,7 @@ function loop() {
     if (hit()) {
       gameOver = true;
       running = false;
-      btn.innerText = "↻";
+      btn.innerText = "Start Over";
       btn.style.display = "block";
     }
   }
