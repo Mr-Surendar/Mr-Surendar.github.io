@@ -228,11 +228,25 @@ function openCertificates(type) {
   if (type === "vr") {
     window.open("files/certificates/Surendar_VR_Dakshin_Pvt_Ltd.pdf", "_blank");
   }
-
   if (type === "ancra") {
     window.open("files/certificates/ancra_certificate.pdf", "_blank");
   }
 }
+
+function openHclWeb() {
+  window.open(
+    "files/certificates/Surendar_HCL_Web.pdf",
+    "_blank"
+  );
+}
+
+function openHclFinalYear() {
+  window.open(
+    "files/certificates/Surendar_HCL_Final_year_project.pdf",
+    "_blank"
+  );
+}
+
 
 const canvas = document.getElementById("dinoCanvas");
 const ctx = canvas.getContext("2d");

@@ -585,19 +585,25 @@ section {
 
 /* HCL – two buttons on hover */
 .certificate-btn {
-  opacity: 0;
-  transform: translateY(6px);
-  transition: all 0.25s ease;
+  pointer-events: auto;
+  cursor: pointer;
+  border: none;
   background: linear-gradient(135deg, #3b82f6, #1e40af);
   color: white;
   padding: 8px 18px;
   border-radius: 30px;
   font-weight: 600;
   font-size: 0.85rem;
-  box-shadow: 0 4px 14px rgba(59, 130, 246, 0.35);
-  text-decoration: none;
-  display: inline-block;
 }
+
+
+.certificate-btn-group {
+  display: flex;
+  gap: 1.5rem;
+}
+
+
+
 
 /* Show both buttons on hover */
 .certificate-card:hover .certificate-btn-group {
