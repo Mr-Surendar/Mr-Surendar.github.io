@@ -223,47 +223,189 @@ openCvBtn.addEventListener("click", () => {
   window.open(CV_PATH, "_blank")
 })
 
-// Contact form handling
-const contactForm = document.getElementById("contact-form")
 
-contactForm.addEventListener("submit", function (e) {
-  e.preventDefault()
+function openCertificates(type) {
+  const certificates = {
+    vr: "files/certificates/Surendar_HCL_Final year_Project completion letter.pdf",
+    hcl: "files/certificates/Surendar_HCL_Web_Internship completion letter.pdf, files/certificates/Surendar_VR Dakshin Pvt Ltd_Internship completion letter.pdf",
+    ancra: "files/certificates/ancra-qa-automation-certificate.pdf"
+  };
 
-  // Get form data
-  const formData = new FormData(this)
-  const name = formData.get("name")
-  const email = formData.get("email")
-  const subject = formData.get("subject")
-  const message = formData.get("message")
+  const url = certificates[type];
 
-  // Simple validation
-  if (!name || !email || !subject || !message) {
-    alert("Please fill in all fields")
-    return
+  if (url) {
+    window.open(url, "_blank");
+  }
+}
+
+const canvas = document.getElementById("dinoCanvas");
+const ctx = canvas.getContext("2d");
+const btn = document.getElementById("dinoBtn");
+
+canvas.width = canvas.offsetWidth;
+canvas.height = 260;
+
+// Game state
+let running = false;
+let gameOver = false;
+let score = 0;
+
+// Ground
+const groundY = 210;
+
+// Dino 
+const dino = {
+  x: canvas.width - 100, 
+  y: groundY,
+  size: 40,
+  vy: 0,
+  jump: -13,
+  gravity: 0.6,
+  grounded: true
+};
+
+// Cactus 🌵
+const cactus = {
+  x: -40,                // START LEFT
+  y: groundY,
+  size: 28,
+  speed: 3.2
+};
+
+// Clouds (shapes – unchanged)
+const clouds = [
+  { x: 200, y: 60 },
+  { x: 450, y: 90 }
+];
+
+// Start / Restart
+btn.onclick = () => {
+  running = true;
+  gameOver = false;
+  score = 0;
+  btn.style.display = "none";
+
+  dino.y = groundY;
+  dino.vy = 0;
+  dino.grounded = true;
+
+  cactus.x = -40;
+};
+
+// Jump
+document.addEventListener("keydown", (e) => {
+  if (e.code === "Space" && running && dino.grounded) {
+    dino.vy = dino.jump;
+    dino.grounded = false;
+  }
+});
+
+// Collision
+function hit() {
+  return (
+    cactus.x + cactus.size > dino.x &&
+    cactus.x < dino.x + dino.size - 6 &&
+    dino.y >= cactus.y - cactus.size + 6
+  );
+}
+
+
+// Draw ground
+function drawGround() {
+  ctx.beginPath();
+  ctx.moveTo(0, groundY);
+  ctx.lineTo(canvas.width, groundY);
+  ctx.strokeStyle = "#9ca3af";
+  ctx.stroke();
+}
+
+// Draw sun
+function drawSun() {
+  ctx.beginPath();
+  ctx.arc(50, 40, 16, 0, Math.PI * 2);
+  ctx.fillStyle = "#FDB813";
+  ctx.fill();
+}
+
+// Draw clouds
+function drawClouds() {
+  ctx.fillStyle = "#e5e7eb";
+  clouds.forEach(c => {
+    ctx.beginPath();
+    ctx.arc(c.x, c.y, 14, 0, Math.PI * 2);
+    ctx.arc(c.x + 18, c.y + 5, 18, 0, Math.PI * 2);
+    ctx.fill();
+
+    c.x += 0.25; // slow right movement
+    if (c.x > canvas.width + 60) c.x = -60;
+  });
+}
+
+// Draw score
+function drawScore() {
+  ctx.font = "16px Inter, sans-serif";
+  ctx.fillStyle = "#374151";
+  ctx.fillText(`Score: ${score}`, canvas.width - 110, 24);
+}
+
+// Draw Dino 
+function drawDino() {
+  ctx.font = "45px serif";
+  ctx.textBaseline = "alphabetic";
+  ctx.fillText("🦖", dino.x, dino.y);
+}
+
+// Draw cactus 
+function drawCactus() {
+  ctx.font = "28px serif";
+  ctx.textBaseline = "alphabetic";
+  ctx.fillText("🌵", cactus.x, cactus.y);
+}
+
+// Game loop
+function loop() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  drawSun();
+  drawClouds();
+  drawGround();
+  drawScore();
+  drawDino();
+
+  if (running && !gameOver) {
+    score++;
+
+    // Dino physics
+    dino.vy += dino.gravity;
+    dino.y += dino.vy;
+
+    if (dino.y >= groundY) {
+      dino.y = groundY;
+      dino.grounded = true;
+    }
+
+    // Cactus movement LEFT → RIGHT
+    cactus.x += cactus.speed;
+    if (cactus.x > canvas.width + cactus.size) {
+      cactus.x = -40;
+    }
+
+    drawCactus();
+
+    // Collision
+    if (hit()) {
+      gameOver = true;
+      running = false;
+      btn.innerText = "↻";
+      btn.style.display = "block";
+    }
   }
 
-  // Email validation
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-  if (!emailRegex.test(email)) {
-    alert("Please enter a valid email address")
-    return
-  }
+  requestAnimationFrame(loop);
+}
 
-  // Simulate form submission
-  const submitBtn = this.querySelector('button[type="submit"]')
-  const originalText = submitBtn.textContent
+loop();
 
-  submitBtn.textContent = "Sending..."
-  submitBtn.disabled = true
-
-  // Simulate API call
-  setTimeout(() => {
-    alert("Thank you for your message! I'll get back to you soon.")
-    this.reset()
-    submitBtn.textContent = originalText
-    submitBtn.disabled = false
-  }, 2000)
-})
 
 // Enhanced typing animation for hero title
 function typeWriter(element, text, speed = 50) {

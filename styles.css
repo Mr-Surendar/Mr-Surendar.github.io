@@ -492,6 +492,99 @@ section {
   font-size: 0.8rem;
 }
 
+/* Certificates */
+
+.certificates {
+  padding: 120px 0px;
+  margin-top: 40px;
+  background: #ffffff;
+}
+
+.certificates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2.5rem;
+}
+
+/* Compact card */
+.certificate-card {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;             
+  padding: 1.6rem 1.4rem;  
+  border-radius: 14px;
+  background: transparent;
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* Logo base */
+.certificate-card img {
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+/* Logo size normalization */
+.logo-wide {
+  max-width: 180px;
+}
+
+.logo-tall {
+  max-width: 130px;
+}
+
+.certificate-logo {
+  height: 110px;     
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hover card */
+.certificate-card:hover {
+  background: #ffffff;
+  border: 1px solid rgba(59, 130, 246, 0.15);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+}
+
+/* Button – hidden by default */
+.certificate-btn {
+  opacity: 0;
+  transform: translateY(6px);
+  transition: all 0.25s ease;
+  background: linear-gradient(135deg, #3b82f6, #1e40af);
+  color: white;
+  padding: 8px 18px; 
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  box-shadow: 0 4px 14px rgba(59, 130, 246, 0.35);
+  pointer-events: none;  
+}
+
+/* Show button on hover */
+.certificate-card:hover .certificate-btn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Blue divider after Certificates section */
+.certificates::after {
+  content: "";
+  display: block;
+  width: 500px;  
+  height: 4px;
+  margin: 80px auto 0; 
+  background: linear-gradient(90deg, #3b82f6, #1e40af);
+  border-radius: 2px;
+}
+
+
+
 /* Projects Section */
 .projects {
   padding: 100px 0;
@@ -1466,4 +1559,53 @@ body:not(.loaded)::after {
   .fallback-buttons .btn {
     width: 100%;
   }
+}
+
+/* Dino Game – Fully Blended */
+.dino-wrapper {
+  position: relative;
+  padding: 0;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+#dinoCanvas {
+  width: 100%;
+  height: 260px;
+  display: block;
+}
+
+/* Start / Restart Button */
+.dino-btn {
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50px;
+  border: none;
+  color: rgb(4, 4, 4);
+  font-weight: 500;
+  font-size: 1.85rem;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.35);
+}
+
+#dinoCanvas {
+  /* fade on left & right edges */
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 12%,
+    black 88%,
+    transparent 100%
+  );
+
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 12%,
+    black 88%,
+    transparent 100%
+  );
 }
