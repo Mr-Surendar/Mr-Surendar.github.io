@@ -225,16 +225,17 @@ openCvBtn.addEventListener("click", () => {
 
 
 function openCertificates(type) {
-  const certificates = {
-    vr: "files/certificates/Surendar_HCL_Final year_Project completion letter.pdf",
-    hcl: "files/certificates/Surendar_HCL_Web_Internship completion letter.pdf, files/certificates/Surendar_VR Dakshin Pvt Ltd_Internship completion letter.pdf",
-    ancra: "files/certificates/ancra-qa-automation-certificate.pdf"
-  };
+  if (type === "vr") {
+    window.open("files/certificates/Surendar_VR Dakshin Pvt Ltd_Internship completion letter.pdf", "_blank");
+  }
 
-  const url = certificates[type];
+  if (type === "hcl") {
+    window.open("files/certificates/Surendar_HCL_Web_Internship completion letter.pdf", "_blank");
+    window.open("files/certificates/Surendar_HCL_Final year_Project completion letter.pdf", "_blank"); 
+  }
 
-  if (url) {
-    window.open(url, "_blank");
+  if (type === "ancra") {
+    window.open("files/certificates/ancra-qa-automation-certificate.pdf", "_blank");
   }
 }
 
