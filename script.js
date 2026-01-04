@@ -226,23 +226,11 @@ openCvBtn.addEventListener("click", () => {
 
 function openCertificates(type) {
   if (type === "vr") {
-    window.open("files/certificates/Surendar_VR Dakshin Pvt Ltd_Internship completion letter.pdf", "_blank");
+    window.open("files/certificates/Surendar_VR_Dakshin_Pvt_Ltd.pdf", "_blank");
   }
-
-  if (type === "hcl") {
-    window.open(
-      "files/certificates/Surendar_HCL_Web_Internship_Completion_Letter.pdf",
-      "_blank"
-    );
-    window.open(
-      "files/certificates/Surendar_HCL_Final_Year_Project_Completion_Letter.pdf",
-      "_blank"
-    );
-  }
-
 
   if (type === "ancra") {
-    window.open("files/certificates/ancra-qa-automation-certificate.pdf", "_blank");
+    window.open("files/certificates/ancra_certificate.pdf", "_blank");
   }
 }
 
