@@ -229,7 +229,7 @@ function openCertificates(type) {
     window.open("files/certificates/Surendar_VR_Dakshin_Pvt_Ltd.pdf", "_blank");
   }
   if (type === "ancra") {
-    window.open("files/certificates/ancra_certificate.pdf", "_blank");
+    window.open("files/certificates/Surrender_Internship_Certificate_ANCRA.pdf", "_blank");
   }
 }
 
