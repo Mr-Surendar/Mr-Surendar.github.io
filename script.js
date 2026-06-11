@@ -95,7 +95,7 @@ const cvLoading = document.getElementById("cv-loading")
 const cvFallback = document.getElementById("cv-fallback")
 const cvEmbedFallback = document.getElementById("cv-embed-fallback")
 
-const CV_PATH = "files/Surendar_Resume_DevOps.pdf"
+const CV_PATH = "files/Surendar_Resume.pdf"
 
 // Function to show loading state
 function showLoading() {
@@ -212,7 +212,7 @@ window.addEventListener("click", (e) => {
 downloadCvBtn.addEventListener("click", () => {
   const link = document.createElement("a")
   link.href = CV_PATH
-  link.download = "Surendar_Resume_DevOps.pdf"
+  link.download = "Surendar_Resume.pdf"
   document.body.appendChild(link)
   link.click()
   document.body.removeChild(link)
