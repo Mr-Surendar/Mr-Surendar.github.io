@@ -65,7 +65,7 @@ function startCountdown() {
 
     let count = 07;
 
-    output.textContent += "\n[ OK ] Redirect scheduled";
+    output.textContent += "\n[ OK ] Redirect scheduled"; 
     output.textContent += "\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━";
     output.textContent += `\nRedirecting in ${count}`;
 
