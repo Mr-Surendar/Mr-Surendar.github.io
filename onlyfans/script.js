@@ -91,7 +91,6 @@ function startCountdown() {
 
         const lines = output.textContent.split("\n");
 
-        // Update only the last line
         lines[lines.length - 1] = `Redirecting in ${String(count).padStart(2,'0')}`;
 
         output.textContent = lines.join("\n");
