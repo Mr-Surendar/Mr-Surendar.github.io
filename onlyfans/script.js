@@ -11,7 +11,6 @@ const lines = [
     "You clicked that link with zero hesitation.",
     "Unfortunately..., it's just bait.",
     "But since you're already here..., I have something better for you.",
-    "[ OK ] Redirect scheduled"
 ];
 
 let line = 0;
@@ -66,13 +65,12 @@ function startCountdown() {
 
     let count = 07;
 
-  
+    output.textContent += "\n[ OK ] Redirect scheduled";
     output.textContent += "\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━";
     output.textContent += `\nRedirecting in ${count}`;
 
     scrollBottom();
 
-    // Show prank link
     const realContent = document.getElementById("real-content");
     realContent.style.display = "block";
 
