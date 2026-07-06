@@ -4,13 +4,14 @@ const terminal = output.parentElement;
 const lines = [
     "Initializing...",
     "******************************",
-    "$ Connecting Onlyfans...",
+    "$ connect onlyfans",
     "████████████████████ 100%",
     "Done ✓",
     "😂 Gotcha!",
-    "You clicked that link with zero hesitation....",
+    "You clicked that link with zero hesitation.",
     "Unfortunately..., it's just bait.",
     "But since you're already here..., I have something better for you.",
+    "[ OK ] Redirect scheduled"
 ];
 
 let line = 0;
