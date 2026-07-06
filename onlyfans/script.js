@@ -7,9 +7,9 @@ const lines = [
     "$ connect onlyfans",
     "████████████████████ 100%",
     "Done ✓",
-    "😂 Gotcha!",
-    "You found my little easter egg.",
-    "Since you're here..., Let me show you what I actually build.",
+    "😂 Oops..!",
+    "You didn't even think twice before clicking.",
+    "Anyways,Since you're here..., Let me show you what I actually build.",
 ];
 
 let line = 0;
