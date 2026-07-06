@@ -43,7 +43,7 @@ function typeLine() {
 
         scrollBottom();
 
-        setTimeout(typeLine, 50);
+        setTimeout(typeLine, 40);
 
     } else {
 
