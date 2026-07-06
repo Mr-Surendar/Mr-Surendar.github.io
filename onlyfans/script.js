@@ -3,7 +3,7 @@ const terminal = output.parentElement;
 
 const lines = [
     "Initializing...",
-    "**************************",
+    "*************************",
     "$ connect onlyfans",
     "████████████████████ 100%",
     "Done ✓",
