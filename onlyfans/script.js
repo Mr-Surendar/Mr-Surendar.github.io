@@ -8,9 +8,8 @@ const lines = [
     "████████████████████ 100%",
     "Done ✓",
     "😂 Gotcha!",
-    "You clicked that link with zero hesitation.",
-    "Unfortunately..., it's just bait.",
-    "But since you're already here..., I have something better for you.",
+    "You found my little easter egg.",
+    "Since you're here..., Let me show you what I actually build.",
 ];
 
 let line = 0;
